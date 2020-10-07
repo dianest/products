@@ -14,6 +14,12 @@ public class ProductRepository {
     items = tmp;
   }
 
+  public void saveAll(Product... products) {
+    for(Product product : products) {
+      save(product);
+    }
+  }
+
   public Product[] findAll() {
     return items;
   }
