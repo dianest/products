@@ -18,6 +18,15 @@ public class Book extends Product {
     this.publishedYear = publishedYear;
   }
 
+  @Override
+  public boolean matches(String search) {
+    if (super.matches(search)) {
+      return true;
+    } else {
+      return getAuthor().equalsIgnoreCase(search);
+    }
+  }
+
   public String getAuthor() {
     return author;
   }

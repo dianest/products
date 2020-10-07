@@ -16,6 +16,14 @@ public class Product {
     this.price = price;
   }
 
+  public boolean matches(String search){
+    if (getName().equalsIgnoreCase(search)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   public int getId() {
     return id;
   }
